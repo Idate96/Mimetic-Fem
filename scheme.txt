@@ -1,0 +1,23 @@
+Design option 0:
+One function space class, multiple generators like def FunctionSpace_0_Form,
+Function_Space_1_Form ... . But what about the numbering for the dof?
+We can create a class for the numbering DofMap() that is called by the constructor of the function space
+and will generate the right numbering scheme.
+As for the basis fucntions we can generate three major classes to inherit from: Element_0-form,
+element_1-form , elemnt -2 form. (or instead of element basis).
+Possibly we can wrap the function spaces again
+For the diffusion tensor just create a class that can be defined as attribute to the mesh.
+
+lobatto -> Nodes edges faces
+gauss -> Nodes edges faces
+extended_gauss -> nodes edges face_nodes
+flexible -> Nodes edges faces
+
+Lobatto nodes, px and py
+        edges, px and py
+        faces  px and py
+
+Extended gauss px and py
+
+flexible nodes, edges, faces
+        4 types of nodes for 1 forms and
